@@ -1,33 +1,31 @@
 {
-    "plumbers": [
-        {
-            "id": 1,
-            "name": "Maude Baumgardner"
-        },
-        {
-            "id": 2,
-            "name": "Merle Baumgardner"
-        }
-    ],
-    "completions": [],
-    "requests": [
-        {
-            "id": 1,
-            "description": "Fix sink leak",
-            "address": "34445 Bianka Ports",
-            "budget": 400,
-            "neededBy": "2021-08-27",
-            "isComplete": false
-        },
-        {
-            "id": 2,
-            "description": "Fix sink faucet",
-            "address": "2345 Wallabe Way",
-            "budget": 150,
-            "neededBy": "2021-08-23",
-            "isComplete": false
-        }   
-    ]
+  "plumbers": [
+    {
+      "id": 1,
+      "name": "Maude Baumgardner"
+    },
+    {
+      "id": 2,
+      "name": "Merle Baumgardner"
+    }
+  ],
+  "completions": [],
+  "requests": [
+    {
+      "id": 1,
+      "description": "Fix sink leak",
+      "address": "34445 Bianka Ports",
+      "budget": 400,
+      "neededBy": "2021-08-27",
+      "isComplete": false
+    },
+    {
+      "id": 2,
+      "description": "Fix sink faucet",
+      "address": "2345 Wallabe Way",
+      "budget": 150,
+      "neededBy": "2021-08-23",
+      "isComplete": false
+    }
+  ]
 }
-
-
