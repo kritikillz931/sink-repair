@@ -1,39 +1,45 @@
 const applicationState = {
-  requests:  []
-}
+  requests: [],
+};
 
-const API = "http://localhost:8088"
+const API = "http://localhost:8088";
 
 export const fetchRequests = () => {
-    return fetch(`${API}/requests`)
-        .then(response => response.json())
-        .then(
-            (serviceRequests) => {
-                // Store the external state in application state
-                console.log("# of serviceRequests = " + serviceRequests.length)
-                applicationState.requests = serviceRequests
-            }
-        )
-}
+  return fetch(`${API}/requests`)
+    .then((response) => response.json())
+    .then((serviceRequests) => {
+      // Store the external state in application state
+      console.log("# of serviceRequests = " + serviceRequests.length);
+      applicationState.requests = serviceRequests;
+    });
+};
 
 export const getRequests = () => {
-  return [...applicationState.requests]
-}
+  return [...applicationState.requests];
+};
 
 export const sendRequest = (userServiceRequest) => {
   const fetchOptions = {
-      method: "POST",
-      headers: {
-          "Content-Type": "application/json"
-      },
-      body: JSON.stringify(userServiceRequest)
-  }
+    method: "POST",
 
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(userServiceRequest),
+  };
 
   return fetch(`${API}/requests`, fetchOptions)
-      .then(response => response.json())
-      .then(() => {
+    .then((response) => response.json())
+    .then(() => {
+      mainContainer.dispatchEvent(new CustomEvent("stateChanged"));
+    });
+};
 
-      })
+export const deleteRequest = (id) => {
+  return fetch(`${API}/requests/${id}`, { method: "DELETE" })
+      .then(
+          () => {
+              mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+          }
+      )
 }
-
