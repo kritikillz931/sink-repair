@@ -9,13 +9,21 @@
       "name": "Merle Baumgardner"
     }
   ],
-  "completions": [],
+  "completions": [
+    {
+      "requestId": "3",
+      "plumberId": "Maude Baumgardner",
+      "date_created": "2:16:19 PM 5/12/2021",
+      "id": 1
+    }
+  ],
   "requests": [
     {
       "description": "Filled sink with Moonshine and it corroded the pipes",
       "address": "222 back lane",
       "budget": "200",
       "neededBy": "2021-02-09",
+      "isComplete": false,
       "id": 1
     },
     {
@@ -23,7 +31,15 @@
       "address": "100 fresh lane",
       "budget": "2300",
       "neededBy": "2021-09-22",
+      "isComplete": false,
       "id": 2
+    },
+    {
+      "description": "ss",
+      "address": "ss",
+      "budget": "33",
+      "neededBy": "3333-03-23",
+      "id": 3
     }
   ]
 }
